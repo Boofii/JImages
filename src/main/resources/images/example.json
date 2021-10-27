@@ -1,0 +1,17 @@
+{
+  "fill_color": {
+    "red": 255,
+    "green": 255,
+    "blue": 0
+  },
+  "width": 256,
+  "height": 256,
+  "properties": [
+    {
+      "type": "text",
+      "text": "Hello!",
+      "x": 128,
+      "y": 128
+    }
+  ]
+}
