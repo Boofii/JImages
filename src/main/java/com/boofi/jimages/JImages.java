@@ -1,21 +1,15 @@
 package com.boofi.jimages;
 
-import com.boofi.jimages.image.ImageManager;
+import com.boofi.jimages.image.ImageResourceManager;
 import com.boofi.jimages.image.property.ImageProperties;
-
-import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
+import com.boofi.jimages.resource.ResourceManager;
 
 public class JImages {
 
-    private static final ImageManager IMAGE_MANAGER = new ImageManager();
+    private static final ResourceManager IMAGE_MANAGER = new ImageResourceManager();
 
     public static void main(String[] args) {
         ImageProperties.register();
-        try {
-            IMAGE_MANAGER.findAndReadResources();
-        } catch (URISyntaxException | FileNotFoundException e) {
-            System.out.println("Error applying image resources: "+e.getMessage()+"");
-        }
+        IMAGE_MANAGER.findAndReadResources();
     }
 }
